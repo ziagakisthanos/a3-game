@@ -9,21 +9,7 @@ const options = ["rock", "paper", "scissors"];
 function computerPlay(){
     const choice = options[Math.floor(Math.random() * options.length)];
     return choice;
-}
-
-function playerPlay(){
-    let input = false;
-    while( input == false){
-        const choice = prompt("Rock Paper Scissors");
-        if(choice == null){
-            continue;
-        }
-        const choiceInLower = choice.toLowerCase();
-        if(options.includes(choiceInLower)){
-            input = true;
-            return choiceInLower;
-        }
-    }
+    console.log(choice);
 }
 
 function checkWinner(playerSelection, computerSelection){
@@ -34,24 +20,39 @@ function checkWinner(playerSelection, computerSelection){
         (playerSelection == "rock" && computerSelection == "scissors") ||
         (playerSelection == "scissors" && computerSelection == "paper") ||
         (playerSelection == "paper" && computerSelection == "rock")
-    ){
-        return "Player";
-    }
-    else {
-        return "Computer";
+        ){
+            return "Player";
         }
-}
+        else {
+            return "Computer";
+        }
+    }
     
-function playRound(playerSelection, computerSelection){
-    const result = checkWinner(playerSelection, computerSelection);
-    if(result == "Tie"){
-        return "Its a Tie!";
-    }
-    else if(result == "Player"){
-        return `You Win! ${playerSelection} beats ${computerSelection}`;
-    }
+    function playRound(playerSelection, computerSelection){
+        const result = checkWinner(playerSelection, computerSelection);
+        if(result == "Tie"){
+            return "Its a Tie!";
+        }
+        else if(result == "Player"){
+            return `You Win! ${playerSelection} beats ${computerSelection}`;
+        }
     else{
         return `You Lose! ${computerSelection} beats ${playerSelection}`;
+    }
+}
+
+function playerPlay(){
+    let input = false;
+    while(input == false){
+        const choice = prompt("Rock Paper Scissors");
+        if(choice == null){
+            continue;
+        }
+        const choiceInLower = choice.toLowerCase();
+        if(options.includes(choiceInLower)){
+            input = true;
+            return choiceInLower;
+        }
     }
 }
 
