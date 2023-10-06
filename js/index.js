@@ -19,22 +19,22 @@ function checkWinner(playerSelection, computerSelection){
         (playerSelection == "rock" && computerSelection == "scissors") ||
         (playerSelection == "scissors" && computerSelection == "paper") ||
         (playerSelection == "paper" && computerSelection == "rock")
-        ){
-            return "Player";
-        }
-        else {
-            return "Computer";
-        }
+    ){
+        return "Player";
     }
-    
-    function playRound(playerSelection, computerSelection){
-        const result = checkWinner(playerSelection, computerSelection);
-        if(result == "Tie"){
-            return "Its a Tie!";
-        }
-        else if(result == "Player"){
-            return `You Win! ${playerSelection} beats ${computerSelection}`;
-        }
+    else {
+         return "Computer";
+    }
+    }
+
+function playRound(playerSelection, computerSelection){
+    const result = checkWinner(playerSelection, computerSelection);
+    if(result == "Tie"){
+        return "Its a Tie!";
+    }
+    else if(result == "Player"){
+        return `You Win! ${playerSelection} beats ${computerSelection}`;
+    }
     else{
         return `You Lose! ${computerSelection} beats ${playerSelection}`;
     }
