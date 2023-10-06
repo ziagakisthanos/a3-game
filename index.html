@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <script src="index.js" defer></script>
     <title>Rock Paper Scissors</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <main>
+      <section>
+        <figure>
+          <h1 class="title">Rock Paper Scissors</h1>
+          <figcaption class="section-images">
+            <button class="move-button js-rock-button">
+              <picture>
+                <img src="images/rock.png" class="move-image" />
+              </picture>
+            </button>
+
+            <button class="move-button js-paper-button">
+              <picture>
+                <img src="images/paper.png" class="move-image" />
+              </picture>
+            </button>
+
+            <button class="move-button js-scissors-button">
+              <picture>
+                <img src="images/scissors.png" class="move-image" />
+              </picture>
+            </button>
+          </figcaption>
+          <figcaption class="section-text">
+            <p class="js-result result">You loose!!!</p>
+            <span class="js-moves">Scissor</span>
+            <span class="your-moves">Rock</span>
+            <p class="js-score score">0 points</p>
+          </figcaption>
+          <figcaption class="section-button">
+            <button class="btn reset-score-button js-reset-score-button">
+              Reset Score
+            </button>
+
+            <button class="btn">Auto Play</button>
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+  </body>
 </html>
