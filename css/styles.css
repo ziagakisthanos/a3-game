@@ -79,4 +79,10 @@ body {
   color: #fff;
   font-size: 1.8rem;
   font-weight: bold;
+  transition: all 0.6s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #8a4914;
 }
