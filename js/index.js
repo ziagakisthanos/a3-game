@@ -1,11 +1,5 @@
 const options = ["rock", "paper", "scissors"];
 
-// const rockBtn = document.querySelector('.btn_rock')
-// const paperBtn = document.querySelector('.btn_paper')
-// const scissorsBtn = document.querySelector('.btn_scissors')
-
-// rockBtn.addEventListener('click', )
-
 function computerPlay(){
     const choice = options[Math.floor(Math.random() * options.length)];
     return choice;
