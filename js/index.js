@@ -19,7 +19,7 @@ function checkWinner(playerSelection, computerSelection){
     else {
          return "Computer";
     }
-    }
+}
 
 function playRound(playerSelection, computerSelection){
     const result = checkWinner(playerSelection, computerSelection);
@@ -40,18 +40,20 @@ function playerPlay(){
         const choice = prompt("Test your luck! Please type 'Rock', 'Paper' or 'Scissors'.");
         if(choice == null){
             confirm("Are you sure you want to exit?")
+        }else if(
+            (options.includes(choice))
+        ){
+        }else{
+            alert("Please enter 'Rock' 'Paper' or 'Scissors'")
+            continue;
         }
         const choiceInLower = choice.toLowerCase().trim();
         if(options.includes(choiceInLower)){
             input = true;
             return choiceInLower;
-        }
+        } 
     }
 }
-
-        
-    
-
 
 function game(){
     let scorePlayer= 0;
