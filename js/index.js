@@ -37,11 +37,11 @@ function playRound(playerSelection, computerSelection){
 function playerPlay(){
     let input = false;
     while(input == false){
-        const choice = prompt("Rock Paper Scissors");
+        const choice = prompt("Test your luck! Please type 'Rock', 'Paper' or 'Scissors'.");
         if(choice == null){
-            continue;
+            confirm("Are you sure you want to exit?")
         }
-        const choiceInLower = choice.toLowerCase();
+        const choiceInLower = choice.toLowerCase().trim();
         if(options.includes(choiceInLower)){
             input = true;
             return choiceInLower;
@@ -49,13 +49,20 @@ function playerPlay(){
     }
 }
 
+        
+    
+
+
 function game(){
     let scorePlayer= 0;
     let scoreComputer = 0;
     for (let i = 0; i < 5; i++) {
         const playerSelection = playerPlay();
         const computerSelection = computerPlay();
+        console.log("Computer: "+ (computerSelection));
+        console.log("You: "+ (playerSelection));
         console.log(playRound(playerSelection, computerSelection));
+        console.log("---Round " + (i+1)  +" End---");
         if(checkWinner(playerSelection, computerSelection) == "Player"){
             scorePlayer++;
         }
