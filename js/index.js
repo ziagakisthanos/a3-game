@@ -61,8 +61,8 @@ function game(){
     for (let i = 0; i < 5; i++) {
         const playerSelection = playerPlay();
         const computerSelection = computerPlay();
-        console.log("Computer: "+ (computerSelection));
         console.log("You: "+ (playerSelection));
+        console.log("Computer: "+ (computerSelection));
         console.log(playRound(playerSelection, computerSelection));
         console.log("---Round " + (i+1)  +" End---");
         if(checkWinner(playerSelection, computerSelection) == "Player"){
