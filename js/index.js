@@ -39,7 +39,10 @@ function playerPlay(){
     while(input == false){
         const choice = prompt("Test your luck! Please type 'Rock', 'Paper' or 'Scissors'.");
         if(choice == null){
-            confirm("Are you sure you want to exit?")
+           const exit= confirm("Are you sure you want to exit?");
+           if(exit == false){
+            continue;
+           }
         }else if(
             (options.includes(choice))
         ){
