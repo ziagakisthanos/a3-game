@@ -43,19 +43,16 @@ function playerPlay(){
            if(exit == false){
             continue;
            }
-        }else if(
-            (options.includes(choice))
-        ){
+        } else if(
+            (options.includes(choice.toLowerCase().trim()))) {
+            const choiceInLower = choice.toLowerCase().trim();
+            input = true;
+            return choiceInLower;
         }else{
             alert("Please enter 'Rock' 'Paper' or 'Scissors'")
             continue;
         }
-        const choiceInLower = choice.toLowerCase().trim();
-        if(options.includes(choiceInLower)){
-            input = true;
-            return choiceInLower;
-        } 
-    }
+    }     
 }
 
 function game(){
